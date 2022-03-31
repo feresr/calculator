@@ -1,6 +1,4 @@
 import React, { useRef, useState, useEffect } from "react";
-import { useLoader } from "@react-three/fiber";
-import * as THREE from "three";
 import { useGLTF, PositionalAudio, Text } from "@react-three/drei";
 
 export default function Model({ ...props }) {
@@ -10,7 +8,7 @@ export default function Model({ ...props }) {
   const [current, setCurrent] = useState(0);
   const [opValue, setOpValue] = useState(0);
   const [op, setOp] = useState("");
-  const { nodes, materials } = useGLTF("./calculator/scene-fixed.glb");
+  const { nodes, materials } = useGLTF("calculator/scene-fixed.glb");
 
   function numberPressed(n) {
     const v = current * 10 + parseInt(n);
